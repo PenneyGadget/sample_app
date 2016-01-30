@@ -14,7 +14,6 @@ class UserMailerTest < ActionMailer::TestCase
   end
 
   test "password_reset" do
-    skip
     user = users(:penney)
     user.reset_token = User.new_token
     mail = UserMailer.password_reset(user)
